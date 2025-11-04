@@ -108,21 +108,6 @@ nav {
     color: #0d6efd;
 }
 
-        .services-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for laptop */
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Mobile view — show one below another */
-@media (max-width: 768px) {
-  .services-container {
-    grid-template-columns: 1fr; /* 1 column only */
-  }
-}
-
-
 .about-section {
     display: flex;
     align-items: center;
@@ -363,17 +348,19 @@ body {
   display: inline-block;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ✅ Make services responsive */
+@media (max-width: 768px) {
   .services-grid {
+    grid-template-columns: 1fr !important; /* one per row */
     gap: 20px;
-    max-width: 98vw;
+    justify-items: center;
   }
+
   .service-card {
-    width: 90vw;
-    min-width: 220px;
+    width: 90% !important; /* make each card fill screen width nicely */
   }
 }
+
 footer {
   background: #e9ecef;
   position: relative;
