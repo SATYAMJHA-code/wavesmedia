@@ -235,68 +235,6 @@ nav {
     }
 }
 
-     /* Basic Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #4cb4ff;
-  padding: 10px 20px;
-}
-
-nav .logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: black;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
-/* Hamburger hidden by default */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* ✅ MOBILE VIEW */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    color: white;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #4cb4ff;
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px 0;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li {
-    padding: 10px 0;
-  }
-}
-
-
 .hero-bg {
   width: 100vw;
   height: 500px;
@@ -654,16 +592,16 @@ html, body {
 <body>
     <header>
         <nav class="navbar">
-           <nav>
-  <div class="logo">WAVES MEDIA HOUSE</div>
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-  <ul id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Our Services</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
+          <div class="logo">
+                <img src="logo.png" alt="Waves Media">Waves Media House
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
 
     </header>
 
@@ -814,15 +752,6 @@ html, body {
 
     <script src="js/main.js"></script>
     <script src="js/scroll-animations.js"></script>
-
-    <script>
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
 
 </body>
 </html>
