@@ -108,6 +108,21 @@ nav {
     color: #0d6efd;
 }
 
+        .services-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for laptop */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Mobile view — show one below another */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr; /* 1 column only */
+  }
+}
+
+
 .about-section {
     display: flex;
     align-items: center;
