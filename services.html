@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+              *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5c5d5d;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f8f9fa;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e2e6ea;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #0d6efd;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.about-section img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.about-text {
+    padding: 0 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}   /* Reset and primary font */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f5f6fa;
+  color: #000000;
+}
+.navbar {
+    width: 100vw;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 64px;
+    height: 80px; /* match logo size */
+    box-sizing: border-box;
+}
+
+.logo img {
+    height: 200px;  /* fit inside navbar */
+    width: auto;
+    display: block;
+    margin-bottom: 0;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    font-size: 20px; /* Only for text logo, not the image itself */
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    /* Remove padding/margin to avoid overlap */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items:center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover, 
+.nav-links li a.active {
+    color: #636668; /* Change to your desired hover color */
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .logo img {
+        height: 80px;
+    }
+    .nav-links {
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Title text */
+.services-title {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+.services-title h1 {
+  font-size: 3rem;
+  color: #4d5c68;
+  margin: 0;
+}
+.services-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+/* Main services section */
+.services-section {
+  margin-top: -60px;
+  padding: 0 0 50px 0;
+  text-align: center;
+}
+.services-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #232d3f;
+}
+
+/* Services Card Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 38px 64px;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+.service-card .icon img {
+    height: 44px;
+    margin-bottom: 24px;
+}
+/* Individual Card */
+.service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 36px 0 rgba(34, 49, 73, 0.05);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    transition: box-shadow .3s;
+}
+.service-card .title {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+.learn-btn {
+    background: none;
+    border: none;
+    color: #2d7df6;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 18px;
+    outline: none;
+    padding: 0;
+    transition: color .2s;
+}
+.learn-btn:hover {
+    text-decoration: underline;
+    color: #fe7725;
+}
+.dropdown {
+    display: none;
+    margin-top: 0;
+    font-size: 16px;
+    color: #444;
+    background: #f8fafd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(34,49,73,0.06);
+    width: 100%;
+    animation: fadeDrop .45s;
+}.service-card.open .dropdown {
+    display: block;
+}
+@keyframes fadeDrop {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.service-card:hover {
+  box-shadow: 0 8px 26px 0 rgba(31, 41, 110, 0.15);
+}
+.service-card h4 {
+  margin: 12px 0 14px 0;
+  font-size: 1.12rem;
+  color: #1a2541;
+  font-weight: 600;
+}
+.service-card .learn-more {
+  color: #2196b7;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .services-grid {
+    gap: 20px;
+    max-width: 98vw;
+  }
+  .service-card {
+    width: 90vw;
+    min-width: 220px;
+  }
+}
+footer {
+  background: #e9ecef;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  background: url('footer-bg.jpg') center left no-repeat;
+  background-size: cover;
+}
+
+.footer-left {
+  width: 30%;
+  padding: 60px 50px 40px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer-right{
+   width: 70%;
+  padding: 60px 50px 40px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: l;
+}
+
+.footer-left {
+  background: rgba(255,255,255,0.73);
+  color: #172c35;
+  position: relative;
+}
+.footer-right {
+  background: rgba(255, 255, 255, 0.73);
+  color: #000000;
+  position: relative;
+}
+
+.footer-left h2,
+.footer-right h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+.footer-left h2 span {
+  color: #79b3bb;
+  font-weight: 400;
+}
+
+.footer-left ul {
+  list-style: disc inside;
+  padding: 0 0 15px 0;
+  margin: 0 0 20px 0;
+}
+.footer-left ul li {
+  margin: 6px 0;
+  font-size: 1.08rem;
+}
+
+.footer-logo {
+  width: 170px;
+  margin-top: 35px;
+}
+
+.footer-right .footer-section {
+  margin-bottom: 18px;
+}
+.footer-label {
+  font-weight: bold;
+  color: #373635;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-size: 0.98rem;
+}
+
+.footer-email {
+  color: #000000;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.footer-socials img {
+  width: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-top: 12px;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 0.92rem;
+  color: #888;
+  background: #141314;
+  padding: 12px 0;
+  letter-spacing: 0.7px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-left, .footer-right {
+    width: 100%;
+    padding: 40px 5vw 20px 5vw;
+    min-height: unset;
+  }
+}
+.services-section {
+  text-align: center;
+  padding: 38px 0 0 0;
+}
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #23272d;
+  margin-bottom: 18px;
+}
+.services-section h2 span {
+  color: #4f758a;
+  font-weight: 600;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 34px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 38px 0 65px 0;
+}
+
+/* Card */
+.service-card {
+  background: #d4d2d2;
+  box-shadow: 0 8px 42px rgba(121, 121, 123, 0.06), 0 1.5px 16px rgba(64,80,128,0.06);
+  border-radius: 16px;
+  padding: 35px 18px 27px 18px;
+  text-align: center;
+  transition: box-shadow 0.16s;
+}
+.service-card:hover {
+  box-shadow: 0 14px 50px rgba(35,49,120,0.10), 0 2.5px 22px rgba(64,80,128,0.10);
+}
+
+/* Icon */
+.service-icon {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  margin-top: 6px;
+}
+
+/* Title */
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 11px;
+  color: #23282c;
+}
+
+/* Description */
+.service-card p {
+  font-size: 0.97rem;
+  font-weight: 400;
+  color: #3e3f40;
+  min-height: 52px;
+  margin-bottom: 27px;
+}
+
+/* Learn Button */
+.learn-btn {
+  text-decoration: none;
+  margin-top: 17px;
+  background: #e53d2b;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+.learn-btn:hover {
+  background: #353536;
+}
+
+/* Responsive grid */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 18px;
+    max-width: 800px;
+  }
+}
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 426px;
+  }
+  .service-card {
+    padding: 24px 12px 19px 12px;
+  }
+  .services-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* =========================
+   SERVICES PAGE – MOBILE FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  /* STOP HORIZONTAL SCROLL */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px;
+    height: auto;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .nav-links li a {
+    font-size: 15px;
+  }
+
+  /* SERVICES SECTION */
+  .services-section {
+    padding-top: 20px;
+  }
+
+  /* SERVICES GRID → SINGLE COLUMN */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 16px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    width: 100%;
+    padding: 22px 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo1.png.png" alt="Waves Media">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <main>
+   <section class="services-section">
+ 
+  <div class="services-grid">
+    <!-- CARD 1 -->
+    <div class="service-card">
+      <img src="content-removebg-preview.png" class="service-icon" alt="Content Writing">
+      <h3>Content Writing</h3>
+      <p>We have the experts to plan, schedule, write and improvise on the need of editing web content to get back the best content for your business.</p>
+      
+    </div>
+    <!-- CARD 2 -->
+    <div class="service-card">
+      <img src="PR-removebg-preview.png" class="service-icon" alt="PR Writing">
+      <h3>PR Writing</h3>
+      <p>We love to create and maintain a worthy relationship with our customers and assist them with the same to have with the public via Public relation writing.</p>
+      
+    </div>
+    <!-- CARD 3 -->
+    <div class="service-card">
+      <img src="press-removebg-preview.png" class="service-icon" alt="Press Release Services">
+      <h3>Press Release Services</h3>
+      <p>Our Press Release services or tools support your press release to reach a larger group of the sorted audience like a journalist, bloggers, digital media...</p>
+      
+    </div>
+    <!-- CARD 4 -->
+    <div class="service-card">
+      <img src="download-removebg-preview.png" class="service-icon" alt="Website Development">
+      <h3>Website Development</h3>
+      <p>The building and managing of the hub of facilities that is your boosting websites are our priority to look into and make it layered with the fastest functionality...</p>
+        </div>
+    <!-- CARD 5 -->
+    <div class="service-card">
+      <img src="guest1-removebg-preview.png" class="service-icon" alt="Guest Posting">
+      <h3>Guest Posting</h3>
+      <p>We have strengthened and attested the process to build backlinks to your desired websites with authority to give a strong push to brand awareness and guest...</p>
+      
+    </div>
+    <!-- CARD 6 -->
+    <div class="service-card">
+      <img src="link-removebg-preview.png" class="service-icon" alt="Link Building">
+      <h3>Link Building</h3>
+      <p>Our team of experts works on an SEO technique to enhance your search engine ranking that helps to boost your brand and business via greater reach.</p>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer>
+    <div class="footer-container">
+      
+    <div class="footer-left">
+       <h2>COMPANY</h2><br>
+      <div class="footer-section">
+        <span class="footer-label">MAIL</span>
+        <div class="footer-email">wavemediahouse02@gmail.com</div>
+      </div><br>
+      <div class="footer-section">
+        <div class="footer-label"> Office Address</div><br>
+        <div>Off.No 102 Shiv Sagar plaza Vapi–396191</div>
+      </div>
+       <div class="footer-socials">
+        <img src="facebook-removebg-preview.png" alt="Facebook">
+        <img src="insta-removebg-preview.png" alt="Instagram">
+        <img src="whatsapp-removebg-preview.png" alt="WhatsApp">
+      </div>
+     
+    </div>
+    <div class="footer-right">
+      <h2>QUICK <span>LINKS</span></h2>
+      <ul>
+        <li>Press Release services</li><br>
+        <li>PR Writing</li><br>
+        <li>Website Development</li><br>
+        <li>Content Writing</li><br>
+        <li>Guest Posting</li><br>
+        <li>Link Building</li><br>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright © 2025 Reserved by Waves Media House
+  </div>
+  </footer>
+    <script src="js/main.js"></script>
+    <script src="js/scroll-animations.js"></script>
+</body>
+</html>
